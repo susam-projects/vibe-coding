@@ -23,7 +23,7 @@ export default function FileExplorer({ initialPath }: FileExplorerProps) {
   const getBreadcrumbPath = () => {
     const breadcrumbs: { name: string; index: number }[] = [{ name: 'This PC', index: -1 }]
 
-    currentPath.forEach((id, index) => {
+    currentPath.forEach((_id, index) => {
       const pathToItem = currentPath.slice(0, index + 1)
       const item = findItemByPath(pathToItem)
       if (item) {
