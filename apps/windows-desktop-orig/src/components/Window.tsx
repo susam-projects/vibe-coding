@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react'
 import type { WindowData } from '../types'
+import './Window.css'
 
 interface WindowProps {
   window: WindowData

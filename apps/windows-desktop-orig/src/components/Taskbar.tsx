@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import StartMenu from './StartMenu'
 import type { WindowData } from '../types'
+import './Taskbar.css'
 
 interface TaskbarProps {
   windows: WindowData[]

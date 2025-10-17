@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { FileSystemItem } from '../fileSystem'
 import { getItemsAtPath, findItemByPath } from '../fileSystem'
+import './FileExplorer.css'
 
 interface FileExplorerProps {
   initialPath: string[]

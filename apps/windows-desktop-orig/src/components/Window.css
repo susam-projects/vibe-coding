@@ -1,0 +1,83 @@
+/* Window */
+.window {
+  position: absolute;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  min-width: 400px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.window.minimized {
+  display: none;
+}
+
+.window-titlebar {
+  height: 32px;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  cursor: move;
+  user-select: none;
+}
+
+.window-title {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  padding-left: 8px;
+}
+
+.window-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.window-control {
+  width: 32px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 12px;
+  transition: background 0.2s;
+}
+
+.window-control:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.window-control.close:hover {
+  background: #e81123;
+  color: white;
+}
+
+.window-content {
+  flex: 1;
+  padding: 16px;
+  overflow: auto;
+  background: white;
+}
+
+.window-icon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.window.dragging {
+  transition: none;
+  cursor: move;
+}

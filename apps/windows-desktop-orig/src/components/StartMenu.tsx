@@ -1,22 +1,14 @@
+import { getAppList } from '../apps/appRegistry'
+
 interface StartMenuProps {
   isOpen: boolean
   onItemClick: (appId: string) => void
 }
 
-interface MenuItem {
-  id: string
-  name: string
-  icon: string
-}
-
-const apps: MenuItem[] = [
-  { id: 'explorer', name: 'File Explorer', icon: '📁' },
-  { id: 'notepad', name: 'Notepad', icon: '📝' },
-  { id: 'about', name: 'About', icon: 'ℹ️' },
-]
-
 export default function StartMenu({ isOpen, onItemClick }: StartMenuProps) {
   if (!isOpen) return null
+
+  const apps = getAppList()
 
   return (
     <div className="start-menu">
@@ -31,7 +23,7 @@ export default function StartMenu({ isOpen, onItemClick }: StartMenuProps) {
               onClick={() => onItemClick(app.id)}
             >
               <div className="start-menu-item-icon">{app.icon}</div>
-              <div className="start-menu-item-text">{app.name}</div>
+              <div className="start-menu-item-text">{app.title}</div>
             </div>
           ))}
         </div>
