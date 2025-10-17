@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react'
+import StartMenu from './StartMenu'
 import type { WindowData } from '../types'
 
 interface TaskbarProps {
   windows: WindowData[]
   onWindowToggle: (id: string) => void
+  onAppLaunch: (appId: string) => void
 }
 
-export default function Taskbar({ windows, onWindowToggle }: TaskbarProps) {
+export default function Taskbar({ windows, onWindowToggle, onAppLaunch }: TaskbarProps) {
   const [time, setTime] = useState('')
+  const [startMenuOpen, setStartMenuOpen] = useState(false)
 
   useEffect(() => {
     const updateClock = () => {
@@ -26,21 +29,34 @@ export default function Taskbar({ windows, onWindowToggle }: TaskbarProps) {
   // Sort windows by z-index (most recent first)
   const sortedWindows = [...windows].sort((a, b) => b.zIndex - a.zIndex)
 
+  const handleStartMenuItemClick = (appId: string) => {
+    setStartMenuOpen(false)
+    onAppLaunch(appId)
+  }
+
   return (
-    <div className="taskbar">
-      <button className="start-button">⊞</button>
-      <div className="taskbar-apps">
-        {sortedWindows.map((window) => (
-          <button
-            key={window.id}
-            className={`taskbar-app ${!window.minimized ? 'active' : ''}`}
-            onClick={() => onWindowToggle(window.id)}
-          >
-            {window.title}
-          </button>
-        ))}
+    <>
+      <StartMenu isOpen={startMenuOpen} onItemClick={handleStartMenuItemClick} />
+      <div className="taskbar">
+        <button
+          className={`start-button ${startMenuOpen ? 'active' : ''}`}
+          onClick={() => setStartMenuOpen(!startMenuOpen)}
+        >
+          ⊞
+        </button>
+        <div className="taskbar-apps">
+          {sortedWindows.map((window) => (
+            <button
+              key={window.id}
+              className={`taskbar-app ${!window.minimized ? 'active' : ''}`}
+              onClick={() => onWindowToggle(window.id)}
+            >
+              {window.title}
+            </button>
+          ))}
+        </div>
+        <div className="taskbar-clock">{time}</div>
       </div>
-      <div className="taskbar-clock">{time}</div>
-    </div>
+    </>
   )
 }

@@ -26,8 +26,7 @@ body, html {
   width: 100%;
   height: 100%;
   background:
-    linear-gradient(135deg, rgba(30, 60, 114, 0.8) 0%, rgba(42, 82, 152, 0.8) 100%),
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23357EC7;stop-opacity:1" /><stop offset="100%" style="stop-color:%23002A5C;stop-opacity:1" /></linearGradient></defs><rect width="1920" height="1080" fill="url(%23grad)"/><circle cx="1600" cy="200" r="400" fill="rgba(255,255,255,0.03)"/><circle cx="300" cy="800" r="300" fill="rgba(255,255,255,0.02)"/></svg>');
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><defs><linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%230078d4;stop-opacity:1"/><stop offset="50%" style="stop-color:%2300bcf2;stop-opacity:1"/><stop offset="100%" style="stop-color:%2300d4ff;stop-opacity:1"/></linearGradient><radialGradient id="sun" cx="50%" cy="50%"><stop offset="0%" style="stop-color:%23fff;stop-opacity:0.9"/><stop offset="40%" style="stop-color:%23ffed4e;stop-opacity:0.7"/><stop offset="100%" style="stop-color:%23ff9d00;stop-opacity:0"/></radialGradient><linearGradient id="ground" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%2300a86b;stop-opacity:1"/><stop offset="100%" style="stop-color:%23004d40;stop-opacity:1"/></linearGradient></defs><rect width="1920" height="1080" fill="url(%23sky)"/><circle cx="1600" cy="300" r="180" fill="url(%23sun)"/><ellipse cx="960" cy="900" rx="1200" ry="400" fill="url(%23ground)"/><ellipse cx="400" cy="950" rx="300" ry="180" fill="%23006b54" opacity="0.6"/><ellipse cx="1400" cy="980" rx="400" ry="200" fill="%23005a45" opacity="0.5"/><path d="M 0 800 Q 480 750 960 800 T 1920 800 L 1920 1080 L 0 1080 Z" fill="%23003d33" opacity="0.3"/><g opacity="0.15"><circle cx="300" cy="400" r="8" fill="white"/><circle cx="500" cy="350" r="6" fill="white"/><circle cx="700" cy="380" r="7" fill="white"/><circle cx="1200" cy="420" r="9" fill="white"/><circle cx="1500" cy="380" r="7" fill="white"/></g></svg>');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -112,6 +111,79 @@ body, html {
 
 .start-button:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+.start-button.active {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Start Menu */
+.start-menu {
+  position: absolute;
+  bottom: 56px;
+  left: 8px;
+  width: 320px;
+  max-height: 500px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  z-index: 999;
+}
+
+.start-menu-header {
+  padding: 16px;
+  background: linear-gradient(135deg, #357EC7 0%, #002A5C 100%);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.start-menu-apps {
+  padding: 8px;
+}
+
+.start-menu-section {
+  margin-bottom: 8px;
+}
+
+.start-menu-section-title {
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.start-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+  user-select: none;
+}
+
+.start-menu-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.start-menu-item-icon {
+  font-size: 24px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-menu-item-text {
+  flex: 1;
+  font-size: 13px;
+  color: #333;
 }
 
 .taskbar-apps {
