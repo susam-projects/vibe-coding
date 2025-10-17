@@ -1,7 +1,11 @@
 import { useState, useRef } from 'react'
 import Window from './Window'
 import Taskbar from './Taskbar'
+import DesktopIcon from './DesktopIcon'
+import FileExplorer from './FileExplorer'
 import type { WindowData } from '../types'
+import type { FileSystemItem } from '../fileSystem'
+import { fileSystem } from '../fileSystem'
 
 const initialWindows: WindowData[] = [
   {
@@ -13,7 +17,7 @@ const initialWindows: WindowData[] = [
         {'\n\n'}
         This is a simple notepad window. You can drag this window around the screen by clicking and holding the title bar.
         {'\n\n'}
-        Try interacting with other windows too!
+        Try double-clicking the folders on the desktop to open them!
       </div>
     ),
     x: 100,
@@ -21,42 +25,6 @@ const initialWindows: WindowData[] = [
     width: 500,
     height: 400,
     zIndex: 100,
-    minimized: false,
-  },
-  {
-    id: 'explorer',
-    title: 'File Explorer',
-    content: (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-        <div style={{ padding: '8px', background: '#f0f0f0', borderRadius: '4px', fontSize: '13px' }}>
-          📁 This PC
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px' }}>
-          {['Documents', 'Pictures', 'Downloads'].map((folder) => (
-            <div
-              key={folder}
-              style={{
-                textAlign: 'center',
-                padding: '12px',
-                cursor: 'pointer',
-                borderRadius: '4px',
-                transition: 'background 0.2s',
-              }}
-              onMouseOver={(e) => (e.currentTarget.style.background = '#f0f0f0')}
-              onMouseOut={(e) => (e.currentTarget.style.background = 'transparent')}
-            >
-              <div style={{ fontSize: '48px' }}>📁</div>
-              <div style={{ fontSize: '12px', marginTop: '8px' }}>{folder}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    ),
-    x: 650,
-    y: 150,
-    width: 600,
-    height: 450,
-    zIndex: 101,
     minimized: false,
   },
   {
@@ -76,7 +44,8 @@ const initialWindows: WindowData[] = [
             <li>Window management (minimize, close)</li>
             <li>Taskbar with active windows</li>
             <li>Live clock</li>
-            <li>Component-based React architecture</li>
+            <li>Desktop icons and folders</li>
+            <li>File explorer with navigation</li>
           </ul>
         </div>
       </div>
@@ -85,14 +54,15 @@ const initialWindows: WindowData[] = [
     y: 250,
     width: 450,
     height: 450,
-    zIndex: 102,
+    zIndex: 101,
     minimized: false,
   },
 ]
 
 export default function Desktop() {
   const [windows, setWindows] = useState<WindowData[]>(initialWindows)
-  const highestZIndex = useRef(102)
+  const highestZIndex = useRef(101)
+  const windowIdCounter = useRef(0)
   const dragOffset = useRef({ x: 0, y: 0 })
 
   const handleDragStart = (id: string, offsetX: number, offsetY: number) => {
@@ -156,8 +126,47 @@ export default function Desktop() {
     setWindows((prevWindows) => prevWindows.filter((win) => win.id !== id))
   }
 
+  const handleFolderOpen = (item: FileSystemItem) => {
+    if (item.type !== 'folder') return
+
+    // Check if window for this folder already exists
+    const existingWindow = windows.find((win) => win.id === `explorer-${item.id}`)
+    if (existingWindow) {
+      // Bring to front and restore if minimized
+      if (existingWindow.minimized) {
+        handleMinimize(existingWindow.id)
+      } else {
+        bringToFront(existingWindow.id)
+      }
+      return
+    }
+
+    // Create new explorer window
+    windowIdCounter.current++
+    highestZIndex.current++
+
+    const newWindow: WindowData = {
+      id: `explorer-${item.id}`,
+      title: item.name,
+      content: <FileExplorer initialPath={[item.id]} />,
+      x: 150 + (windowIdCounter.current * 30) % 300,
+      y: 100 + (windowIdCounter.current * 30) % 200,
+      width: 700,
+      height: 500,
+      zIndex: highestZIndex.current,
+      minimized: false,
+    }
+
+    setWindows((prevWindows) => [...prevWindows, newWindow])
+  }
+
   return (
     <div className="desktop">
+      <div className="desktop-icons">
+        {fileSystem.map((item) => (
+          <DesktopIcon key={item.id} item={item} onDoubleClick={handleFolderOpen} />
+        ))}
+      </div>
       <div id="windows-container">
         {windows.map((window) => (
           <Window
