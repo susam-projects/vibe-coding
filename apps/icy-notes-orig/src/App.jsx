@@ -186,7 +186,7 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>What Remains</h1>
+        <h1>Glacial</h1>
         <button className="add-note-btn" onClick={createNote}>
           + New Note
         </button>
