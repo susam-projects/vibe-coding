@@ -2,7 +2,7 @@
 
 A modern web-based Windows desktop environment simulator built with React, TypeScript, and Vite.
 
-🔗 **Live Demo**: [https://vibe-coding-windows-desktop.vercel.app/](https://vibe-coding-windows-desktop.vercel.app/)
+🔗 **Live Demo**: [https://windows-desktop.netlify.app/](https://windows-desktop.netlify.app/)
 
 ![Windows Desktop Simulator](https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?style=flat&logo=typescript)
