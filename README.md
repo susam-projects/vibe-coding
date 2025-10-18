@@ -96,10 +96,10 @@ pnpm nx run-many -t typecheck
 ```
 vibe-coding/
 ├── apps/
-│   ├── bare-metal/                   # Metal-themed notes app
 │   ├── apartment-rental-landing/     # Landing page
 │   ├── windows-desktop/              # Windows desktop simulator
-│   └── icy-notes/                    # Ice-themed notes app
+│   ├── icy-notes/                    # Ice-themed notes app
+│   └── bare-metal/                   # Metal-themed notes app
 ├── libs/                             # Shared libraries (future)
 ├── nx.json                           # Nx workspace configuration
 ├── tsconfig.base.json                # Base TypeScript config
@@ -146,9 +146,9 @@ pnpm nx reset
 The only requirement: everything here is created through AI-assisted methods. The diversity of applications—from aesthetic experiments to functional tools—demonstrates the versatility of this approach.
 
 Current experiments include:
-- Aesthetic exploration (Glacial, Bare Metal)
-- Interface recreation (Windows Desktop)
 - Practical applications (LuxeHomes)
+- Interface recreation (Windows Desktop)
+- Aesthetic exploration (Glacial, Bare Metal)
 - ...and whatever comes next
 
 ## 🧪 Development Workflow
