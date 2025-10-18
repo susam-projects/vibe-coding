@@ -11,9 +11,21 @@ This is an Nx monorepo managed with pnpm, containing the following applications 
 - **Package Manager**: pnpm
 - **Nx Version**: 21.6.5
 
+## Project Structure
+
+```
+vibe-coding/
+├── apps/
+│   └── bare-metal/          # React application
+├── libs/                    # Shared libraries (future)
+├── nx.json                  # Nx workspace configuration
+├── tsconfig.base.json       # Base TypeScript config
+└── package.json             # Root package.json
+```
+
 ## Applications
 
-### bare-metal
+### bare-metal (apps/bare-metal)
 React application with the following stack:
 - React 19.0.0
 - Vite 7.1.10 (bundler)
