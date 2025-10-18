@@ -1,96 +1,184 @@
-# VibeCoding
+# Vibe Coding
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+A collection of experimental web applications, a "vibe-coding" experiment: building software with the help of AI. The applications are not just plain functionality they explore the intersection of aesthetics, interaction design, and emotional resonance.
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
+## 🎨 Applications
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/intro#learn-nx?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+### [LuxeHomes](apps/apartment-rental-landing)
+**Modern apartment rental landing page**
 
-## Run tasks
+A responsive landing page for an apartment rental company with smooth animations and modern design.
 
-To run tasks with Nx use:
+- 🛠️ React 19 + Vite + CSS3
+- 🎯 Features: Hero section, features showcase, testimonials, contact form, responsive design
 
-```sh
-npx nx <target> <project-name>
+### [Windows Desktop Simulator](apps/windows-desktop)
+**Web-based Windows environment**
+
+An authentic Windows-style desktop environment with draggable windows, taskbar, start menu, and built-in applications.
+
+- 🔗 [Live Demo](https://vibe-coding-windows-desktop.netlify.app/)
+- 🛠️ React 19 + TypeScript + Vite
+- 🎯 Features: Window management, File Explorer, Notepad, custom hooks architecture
+
+### [Glacial (Icy Notes)](apps/icy-notes)
+**Notes that age like ice**
+
+A minimalist note-taking app exploring preservation aesthetics. Fresh notes appear clear, older notes develop frost patterns, ancient entries become heavily crystallized.
+
+- 🛠️ React 19 + Vite + hand-crafted SVG
+- 🎯 Features: Age-based visual progression, hover melt effect, glassmorphic design, localStorage persistence
+
+### [Bare Metal Notes](apps/bare-metal)
+**Industrial note-taking with metal textures**
+
+A note-taking application with an industrial metal aesthetic. Notes rendered as brushed metal plates secured with screws, featuring realistic textures and rust effects.
+
+- 🔗 [Live Demo](https://vibe-coding-bm-notes.netlify.app/)
+- 🛠️ React 19 + TypeScript + CSS Modules
+- 🎯 Features: Create/delete notes, dual texture variants (CSS/SVG), responsive layout
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+
+- pnpm (recommended)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone git@github.com:susam-projects/vibe-coding.git
+cd vibe-coding
+
+# Install dependencies
+pnpm install
 ```
 
-For example:
+### Development
 
-```sh
-npx nx build myproject
+```bash
+# Serve any application
+pnpm nx serve <app-name>
+
+# Examples:
+pnpm nx serve apartment-rental-landing
+pnpm nx serve windows-desktop
+pnpm nx serve icy-notes
+pnpm nx serve bare-metal
+
+# Build for production
+pnpm nx build <app-name>
+
+# Run tests
+pnpm nx test <app-name>
+
+# Type checking
+pnpm nx typecheck <app-name>
 ```
 
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
+### Run All Apps
 
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+```bash
+# Build all applications
+pnpm nx run-many -t build
 
-## Add new projects
+# Test all applications
+pnpm nx run-many -t test
 
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
-
-To install a new plugin you can use the `nx add` command. Here's an example of adding the React plugin:
-```sh
-npx nx add @nx/react
+# Type check all applications
+pnpm nx run-many -t typecheck
 ```
 
-Use the plugin's generator to create new projects. For example, to create a new React app or library:
+## 📁 Project Structure
 
-```sh
-# Generate an app
-npx nx g @nx/react:app demo
-
-# Generate a library
-npx nx g @nx/react:lib some-lib
+```
+vibe-coding/
+├── apps/
+│   ├── bare-metal/                   # Metal-themed notes app
+│   ├── apartment-rental-landing/     # Landing page
+│   ├── windows-desktop/              # Windows desktop simulator
+│   └── icy-notes/                    # Ice-themed notes app
+├── libs/                             # Shared libraries (future)
+├── nx.json                           # Nx workspace configuration
+├── tsconfig.base.json                # Base TypeScript config
+└── package.json                      # Monorepo dependencies
 ```
 
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
+## 🛠️ Tech Stack
 
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+All applications share a modern tech stack:
 
-## Set up CI!
+- **React 19** - Latest React with improved performance
+- **TypeScript 5.9+** - Type safety
+- **Vite 7** - Lightning-fast build tool
+- **Vitest 3** - Unit testing
+- **Nx 21** - Monorepo tooling and task orchestration
+- **pnpm** - Fast, disk space efficient package manager
 
-### Step 1
+## 📚 Common Commands
 
-To connect to Nx Cloud, run the following command:
+```bash
+# Show workspace graph
+pnpm nx graph
 
-```sh
-npx nx connect
+# Show project details
+pnpm nx show project <app-name>
+
+# List all projects
+pnpm nx show projects
+
+# Run affected builds (only changed apps)
+pnpm nx affected -t build
+
+# Run affected tests
+pnpm nx affected -t test
+
+# Clear Nx cache
+pnpm nx reset
 ```
 
-Connecting to Nx Cloud ensures a [fast and scalable CI](https://nx.dev/ci/intro/why-nx-cloud?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) pipeline. It includes features such as:
+## 🎯 Philosophy
 
-- [Remote caching](https://nx.dev/ci/features/remote-cache?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task distribution across multiple machines](https://nx.dev/ci/features/distribute-task-execution?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Automated e2e test splitting](https://nx.dev/ci/features/split-e2e-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task flakiness detection and rerunning](https://nx.dev/ci/features/flaky-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+**Vibe Coding** is a modern development approach that embraces heavy AI usage throughout the entire development cycle. This monorepo showcases projects built with AI as a primary development partner.
 
-### Step 2
+The only requirement: everything here is created through AI-assisted methods. The diversity of applications—from aesthetic experiments to functional tools—demonstrates the versatility of this approach.
 
-Use the following command to configure a CI workflow for your workspace:
+Current experiments include:
+- Aesthetic exploration (Glacial, Bare Metal)
+- Interface recreation (Windows Desktop)
+- Practical applications (LuxeHomes)
+- ...and whatever comes next
 
-```sh
-npx nx g ci-workflow
-```
+## 🧪 Development Workflow
 
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+1. Create feature branches from `main`
+2. Make changes and test locally with `pnpm nx serve <app>`
+3. Run type checking and tests
+4. Commit with descriptive messages
+5. Push and create pull requests
 
-## Install Nx Console
+## 📖 Documentation
 
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
+Each application has its own detailed README:
 
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+- [LuxeHomes README](apps/apartment-rental-landing/README.md)
+- [Windows Desktop README](apps/windows-desktop/README.md)
+- [Glacial README](apps/icy-notes/README.md)
+- [Bare Metal Notes README](apps/bare-metal/README.md)
 
-## Useful links
+## 🔧 Nx Features
 
-Learn more:
+This monorepo uses Nx for:
 
-- [Learn more about this workspace setup](https://nx.dev/getting-started/intro#learn-nx?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+- **Task Orchestration**: Smart build caching and task distribution
+- **Code Generation**: Consistent project scaffolding
+- **Dependency Graph**: Visual project relationships
+- **Affected Commands**: Build/test only what changed
 
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+Learn more about [Nx](https://nx.dev).
+
+## 📝 License
+
+MIT
