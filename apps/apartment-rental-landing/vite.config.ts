@@ -6,7 +6,7 @@ import { nxCopyAssetsPlugin } from "@nx/vite/plugins/nx-copy-assets.plugin";
 
 export default defineConfig(() => ({
   root: __dirname,
-  cacheDir: "../../node_modules/.vite/apps/apartment-rental-landing",
+  cacheDir: "../../node_modules/.vite/apartment-rental-landing",
   server: {
     port: 4200,
     host: "localhost",
@@ -21,7 +21,7 @@ export default defineConfig(() => ({
   //  plugins: [ nxViteTsPaths() ],
   // },
   build: {
-    outDir: "../../dist/apps/apartment-rental-landing",
+    outDir: "../../dist/apartment-rental-landing",
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
@@ -36,7 +36,7 @@ export default defineConfig(() => ({
     include: ["{src,tests}/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
     reporters: ["default"],
     coverage: {
-      reportsDirectory: "../../coverage/apps/apartment-rental-landing",
+      reportsDirectory: "../../coverage/apartment-rental-landing",
       provider: "v8" as const,
     },
   },
