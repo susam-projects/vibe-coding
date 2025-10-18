@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --metal-warm: #8b7355;
+  --metal-dark: #3a3633;
+  --metal-light: #c0b5a8;
+  --metal-rust: #a0522d;
+  --metal-steel: #71797e;
+  --text-light: #e8e6e3;
+  --text-dark: #2b2826;
+  --shadow-deep: rgba(0, 0, 0, 0.6);
+  --shadow-medium: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #2b2826 0%, #3a3633 25%, #4a4540 50%, #3a3633 75%, #2b2826 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: var(--text-light);
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 2px,
+      rgba(0, 0, 0, 0.03) 4px
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+
+#root {
+  position: relative;
+  z-index: 2;
+}
+
+input, textarea, button {
+  font-family: inherit;
+}

@@ -1,1 +1,95 @@
-/* Your styles goes here. */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: linear-gradient(135deg, #4a4540 0%, #3a3633 50%, #4a4540 100%);
+  padding: 1.5rem 2rem;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+  border-bottom: 3px solid #5a5550;
+  position: relative;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 3px,
+      rgba(0, 0, 0, 0.03) 3px,
+      rgba(0, 0, 0, 0.03) 6px
+    );
+  pointer-events: none;
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-light);
+  text-shadow:
+    2px 2px 4px rgba(0, 0, 0, 0.5),
+    0 0 10px rgba(139, 115, 85, 0.3);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.addButton {
+  background: linear-gradient(135deg, #8b7355 0%, #6a5545 100%);
+  border: 2px solid #9a8365;
+  color: var(--text-light);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.addButton:hover {
+  background: linear-gradient(135deg, #9a8365 0%, #7a6555 100%);
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.addButton:active {
+  transform: translateY(0);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
