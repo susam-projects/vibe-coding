@@ -16,17 +16,18 @@ This is an Nx monorepo managed with pnpm, containing the following applications 
 ```
 vibe-coding/
 ├── apps/
-│   └── bare-metal/          # React application
-├── libs/                    # Shared libraries (future)
-├── nx.json                  # Nx workspace configuration
-├── tsconfig.base.json       # Base TypeScript config
-└── package.json             # Root package.json
+│   ├── bare-metal/                   # Metal-themed notes app
+│   └── apartment-rental-landing/     # Landing page app
+├── libs/                             # Shared libraries (future)
+├── nx.json                           # Nx workspace configuration
+├── tsconfig.base.json                # Base TypeScript config
+└── package.json                      # Root package.json
 ```
 
 ## Applications
 
 ### bare-metal (apps/bare-metal)
-React application with the following stack:
+Metal-themed notes application with the following stack:
 - React 19.0.0
 - Vite 7.1.10 (bundler)
 - Vitest 3.2.4 (unit testing)
@@ -38,7 +39,20 @@ React application with the following stack:
 pnpm nx serve bare-metal       # Start dev server
 pnpm nx build bare-metal       # Build for production
 pnpm nx test bare-metal        # Run tests
-pnpm nx lint bare-metal        # Lint code
+```
+
+### apartment-rental-landing (apps/apartment-rental-landing)
+Landing page application with the following stack:
+- React 19.0.0
+- Vite 7.1.10 (bundler)
+- Vitest 3.2.4 (unit testing)
+- TypeScript 5.9.3
+
+**Commands:**
+```bash
+pnpm nx serve apartment-rental-landing       # Start dev server
+pnpm nx build apartment-rental-landing       # Build for production
+pnpm nx test apartment-rental-landing        # Run tests
 ```
 
 ## Common Commands

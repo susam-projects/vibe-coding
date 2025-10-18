@@ -33,7 +33,8 @@
         "babel": true,
         "style": "css",
         "linter": "none",
-        "bundler": "vite"
+        "bundler": "vite",
+        "e2eTestRunner": "none"
       },
       "component": {
         "style": "css"

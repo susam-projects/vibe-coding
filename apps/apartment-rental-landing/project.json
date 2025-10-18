@@ -1,0 +1,9 @@
+{
+  "name": "apartment-rental-landing",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/apartment-rental-landing/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project apartment-rental-landing --web",
+  "targets": {}
+}

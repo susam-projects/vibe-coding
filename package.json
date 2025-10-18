@@ -5,6 +5,7 @@
   "scripts": {},
   "private": true,
   "devDependencies": {
+    "@nx/devkit": "21.6.5",
     "@nx/js": "21.6.5",
     "@nx/react": "^21.6.5",
     "@nx/vite": "21.6.5",
