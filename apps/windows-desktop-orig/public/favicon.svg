@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="windowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0078d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00bcf2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="url(#windowGrad)"/>
+
+  <!-- Windows logo style squares -->
+  <rect x="7" y="7" width="8" height="8" fill="white" opacity="0.9"/>
+  <rect x="17" y="7" width="8" height="8" fill="white" opacity="0.9"/>
+  <rect x="7" y="17" width="8" height="8" fill="white" opacity="0.9"/>
+  <rect x="17" y="17" width="8" height="8" fill="white" opacity="0.9"/>
+</svg>
