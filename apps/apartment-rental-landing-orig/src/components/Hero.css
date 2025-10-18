@@ -1,0 +1,132 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+  gap: 4rem;
+  min-height: 75vh;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 560px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  color: #0f172a;
+  letter-spacing: -0.025em;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: #475569;
+  margin-bottom: 2rem;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease-out 0.3s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 968px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 2rem;
+    gap: 2.5rem;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.0625rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-img {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+}
