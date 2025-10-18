@@ -2,6 +2,8 @@
 
 A note-taking application with an industrial metal aesthetic. Each note is rendered as a brushed metal plate secured with screws, featuring realistic textures and rust effects.
 
+🔗 **Live Demo**: [https://vibe-coding-bm-notes.netlify.app/](https://vibe-coding-bm-notes.netlify.app/)
+
 ## Monorepo Context
 
 This application is part of the [vibe-coding](https://github.com/susam-projects/vibe-coding) monorepo.
