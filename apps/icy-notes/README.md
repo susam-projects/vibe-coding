@@ -53,43 +53,6 @@ pnpm nx serve icy-notes
 pnpm nx build icy-notes
 ```
 
-### Other Commands
-
-```bash
-# Run tests
-pnpm nx test icy-notes
-
-# Type checking
-pnpm nx typecheck icy-notes
-
-# Preview production build
-pnpm nx preview icy-notes
-```
-
-## Project Structure
-
-```
-apps/icy-notes/
-├── src/
-│   ├── components/
-│   │   ├── IceCracks.jsx
-│   │   └── IceTexture.jsx
-│   ├── App.jsx
-│   ├── App.css
-│   ├── index.css
-│   └── main.jsx
-├── public/
-│   ├── favicon.svg
-│   ├── ice-crack-light.svg
-│   ├── ice-crack-medium.svg
-│   ├── ice-crack-heavy.svg
-│   └── vite.svg
-├── index.html
-├── project.json          # Nx configuration
-├── vite.config.ts
-└── README.md             # This file
-```
-
 ## Design Philosophy
 
 Notes aren't just data to be stored—they're moments to be preserved. The ice aesthetic represents:
