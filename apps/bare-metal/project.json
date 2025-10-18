@@ -1,7 +1,7 @@
 {
   "name": "bare-metal",
-  "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "bare-metal/src",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/bare-metal/src",
   "projectType": "application",
   "tags": [],
   "// targets": "to see all targets run: nx show project bare-metal --web",
