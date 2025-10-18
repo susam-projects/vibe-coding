@@ -2,11 +2,17 @@
 
 A modern web-based Windows desktop environment simulator built with React, TypeScript, and Vite.
 
-🔗 **Live Demo**: [https://windows-desktop.netlify.app/](https://windows-desktop.netlify.app/)
+🔗 **Live Demo**: [https://vibe-coding-windows-desktop.netlify.app/](https://vibe-coding-windows-desktop.netlify.app/)
 
 ![Windows Desktop Simulator](https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?style=flat&logo=typescript)
 ![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?style=flat&logo=vite)
+
+## Monorepo Context
+
+This application is part of the [vibe-coding](https://github.com/susam-projects/vibe-coding) monorepo.
+
+**Location**: `apps/windows-desktop/`
 
 ## Features
 
@@ -31,23 +37,32 @@ A modern web-based Windows desktop environment simulator built with React, TypeS
 ## Project Structure
 
 ```
-src/
-├── apps/              # Application components
-│   ├── AboutApp.tsx
-│   ├── NotepadApp.tsx
-│   ├── FileExplorer.tsx
-│   ├── appRegistry.tsx
-│   └── apps.css
-├── components/        # UI components
-│   ├── Desktop.tsx
-│   ├── Window.tsx
-│   ├── Taskbar.tsx
-│   ├── StartMenu.tsx
-│   └── DesktopIcon.tsx
-├── hooks/            # Custom React hooks
-│   └── useWindowManager.tsx
-├── fileSystem.ts     # File system data and utilities
-└── types.ts          # TypeScript type definitions
+apps/windows-desktop/
+├── src/
+│   ├── apps/              # Application components
+│   │   ├── AboutApp.tsx
+│   │   ├── NotepadApp.tsx
+│   │   ├── FileExplorer.tsx
+│   │   ├── appRegistry.tsx
+│   │   └── apps.css
+│   ├── components/        # UI components
+│   │   ├── Desktop.tsx
+│   │   ├── Window.tsx
+│   │   ├── Taskbar.tsx
+│   │   ├── StartMenu.tsx
+│   │   └── DesktopIcon.tsx
+│   ├── hooks/            # Custom React hooks
+│   │   └── useWindowManager.tsx
+│   ├── fileSystem.ts     # File system data and utilities
+│   ├── types.ts          # TypeScript type definitions
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── style.css
+├── public/
+├── index.html
+├── project.json          # Nx configuration
+├── vite.config.ts
+└── README.md             # This file
 ```
 
 ## Getting Started
@@ -55,26 +70,36 @@ src/
 ### Prerequisites
 
 - Node.js 18+
-- pnpm (recommended) or npm
+- pnpm (recommended)
 
 ### Installation
 
 ```bash
-# Clone the repository
-git clone git@github.com:susam-projects/vibe-coding-windows-desktop.git
-cd vibe-coding-windows-desktop
+# Clone the monorepo
+git clone git@github.com:susam-projects/vibe-coding.git
+cd vibe-coding
 
-# Install dependencies
+# Install dependencies (from monorepo root)
 pnpm install
 
 # Start development server
-pnpm dev
+pnpm nx serve windows-desktop
 
 # Build for production
-pnpm build
+pnpm nx build windows-desktop
 
 # Preview production build
-pnpm preview
+pnpm nx preview windows-desktop
+```
+
+### Other Commands
+
+```bash
+# Run tests
+pnpm nx test windows-desktop
+
+# Type checking
+pnpm nx typecheck windows-desktop
 ```
 
 ## Development

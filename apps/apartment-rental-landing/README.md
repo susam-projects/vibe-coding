@@ -2,6 +2,12 @@
 
 A modern, responsive landing page for an apartment rental company built with Vite and React.
 
+## Monorepo Context
+
+This application is part of the [vibe-coding](https://github.com/susam-projects/vibe-coding) monorepo.
+
+**Location**: `apps/apartment-rental-landing/`
+
 ## Features
 
 - **Modern Design**: Clean and professional layout with gradient accents
@@ -25,46 +31,54 @@ A modern, responsive landing page for an apartment rental company built with Vit
 
 ### Prerequisites
 
-- Node.js (v14 or higher)
-- npm or yarn
+- Node.js 18+
+- pnpm (recommended)
 
 ### Installation
 
-1. Navigate to the project directory:
+1. Clone the monorepo:
 ```bash
-cd apartment-rental-landing
+git clone git@github.com:susam-projects/vibe-coding.git
+cd vibe-coding
 ```
 
-2. Install dependencies:
+2. Install dependencies (from monorepo root):
 ```bash
-npm install
+pnpm install
 ```
 
 3. Start the development server:
 ```bash
-npm run dev
+pnpm nx serve apartment-rental-landing
 ```
 
-4. Open your browser and visit `http://localhost:5173`
+The app will be available at a port assigned by Nx (typically `http://localhost:4200`).
 
 ### Build for Production
 
 ```bash
-npm run build
+pnpm nx build apartment-rental-landing
 ```
 
-The built files will be in the `dist` directory.
+The built files will be in the `dist/apartment-rental-landing` directory.
 
-### Preview Production Build
+### Other Commands
 
 ```bash
-npm run preview
+# Run tests
+pnpm nx test apartment-rental-landing
+
+# Type checking
+pnpm nx typecheck apartment-rental-landing
+
+# Preview production build
+pnpm nx preview apartment-rental-landing
 ```
 
 ## Project Structure
 
 ```
-apartment-rental-landing/
+apps/apartment-rental-landing/
 ├── src/
 │   ├── components/
 │   │   ├── Header.jsx & Header.css
@@ -80,7 +94,9 @@ apartment-rental-landing/
 │   └── main.jsx
 ├── public/
 ├── index.html
-└── package.json
+├── project.json          # Nx configuration
+├── vite.config.ts
+└── README.md             # This file
 ```
 
 ## Customization
