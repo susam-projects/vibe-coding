@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" preserveAspectRatio="none">
+  <defs>
+    <filter id="blur3">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.7"/>
+    </filter>
+  </defs>
+
+  <!-- Heavy crack pattern - more complex -->
+  <g opacity="0.5">
+    <!-- Main crack 1 -->
+    <path d="M 30 100 Q 80 110, 140 105 T 240 120 Q 290 125, 380 115"
+          stroke="white" stroke-width="2" fill="none" stroke-linecap="round" filter="url(#blur3)"/>
+    <path d="M 30 100 Q 80 110, 140 105 T 240 120 Q 290 125, 380 115"
+          stroke="rgba(130,180,220,0.75)" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+
+    <!-- Branch 1a -->
+    <path d="M 140 105 Q 150 75, 160 40"
+          stroke="white" stroke-width="1.4" fill="none" stroke-linecap="round" filter="url(#blur3)"/>
+    <path d="M 140 105 Q 150 75, 160 40"
+          stroke="rgba(130,180,220,0.65)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+
+    <!-- Branch 1b -->
+    <path d="M 240 120 L 260 170"
+          stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round" filter="url(#blur3)"/>
+    <path d="M 240 120 L 260 170"
+          stroke="rgba(130,180,220,0.6)" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- Main crack 2 -->
+    <path d="M 80 250 Q 130 245, 200 250 T 340 265"
+          stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" filter="url(#blur3)"/>
+    <path d="M 80 250 Q 130 245, 200 250 T 340 265"
+          stroke="rgba(130,180,220,0.7)" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+
+    <!-- Branch 2a -->
+    <path d="M 200 250 Q 210 220, 220 190"
+          stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round" filter="url(#blur3)"/>
+    <path d="M 200 250 Q 210 220, 220 190"
+          stroke="rgba(130,180,220,0.6)" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- Main crack 3 -->
+    <path d="M 120 340 Q 180 335, 250 340 L 360 345"
+          stroke="white" stroke-width="1.6" fill="none" stroke-linecap="round" filter="url(#blur3)"/>
+    <path d="M 120 340 Q 180 335, 250 340 L 360 345"
+          stroke="rgba(130,180,220,0.65)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Branch 3a -->
+    <path d="M 250 340 L 265 370"
+          stroke="white" stroke-width="1" fill="none" stroke-linecap="round" filter="url(#blur3)"/>
+    <path d="M 250 340 L 265 370"
+          stroke="rgba(130,180,220,0.55)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
