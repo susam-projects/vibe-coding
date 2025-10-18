@@ -1,0 +1,9 @@
+{
+  "projectName": "vibe-coding",
+  "description": "Nx monorepo for vibe coding projects",
+  "preferences": {
+    "packageManager": "pnpm",
+    "testRunner": "vitest",
+    "linter": "eslint"
+  }
+}
