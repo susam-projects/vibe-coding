@@ -8,11 +8,11 @@ export default defineConfig(() => ({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/bare-metal',
   server: {
-    port: 4200,
+    port: 4203,
     host: 'localhost',
   },
   preview: {
-    port: 4200,
+    port: 4203,
     host: 'localhost',
   },
   plugins: [react(), nxViteTsPaths(), nxCopyAssetsPlugin(['*.md'])],
