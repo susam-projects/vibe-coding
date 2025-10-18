@@ -17,7 +17,9 @@ This is an Nx monorepo managed with pnpm, containing the following applications 
 vibe-coding/
 ├── apps/
 │   ├── bare-metal/                   # Metal-themed notes app
-│   └── apartment-rental-landing/     # Landing page app
+│   ├── apartment-rental-landing/     # Landing page app
+│   ├── windows-desktop/              # Windows desktop app
+│   └── icy-notes/                    # Icy notes app
 ├── libs/                             # Shared libraries (future)
 ├── nx.json                           # Nx workspace configuration
 ├── tsconfig.base.json                # Base TypeScript config
@@ -53,6 +55,34 @@ Landing page application with the following stack:
 pnpm nx serve apartment-rental-landing       # Start dev server
 pnpm nx build apartment-rental-landing       # Build for production
 pnpm nx test apartment-rental-landing        # Run tests
+```
+
+### windows-desktop (apps/windows-desktop)
+Windows desktop application with the following stack:
+- React 19.0.0
+- Vite 7.1.10 (bundler)
+- Vitest 3.2.4 (unit testing)
+- TypeScript 5.9.3
+
+**Commands:**
+```bash
+pnpm nx serve windows-desktop       # Start dev server
+pnpm nx build windows-desktop       # Build for production
+pnpm nx test windows-desktop        # Run tests
+```
+
+### icy-notes (apps/icy-notes)
+Icy notes application with the following stack:
+- React 19.0.0
+- Vite 7.1.10 (bundler)
+- Vitest 3.2.4 (unit testing)
+- TypeScript 5.9.3
+
+**Commands:**
+```bash
+pnpm nx serve icy-notes       # Start dev server
+pnpm nx build icy-notes       # Build for production
+pnpm nx test icy-notes        # Run tests
 ```
 
 ## Common Commands
