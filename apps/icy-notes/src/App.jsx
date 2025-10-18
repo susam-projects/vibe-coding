@@ -10,7 +10,7 @@ function App() {
   // Load notes from localStorage on mount
   useEffect(() => {
     const savedNotes = localStorage.getItem('icy-notes')
-    if (savedNotes.length > 2) {
+    if (savedNotes?.length > 2) {
       try {
         setNotes(JSON.parse(savedNotes))
       } catch (e) {
