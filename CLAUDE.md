@@ -22,7 +22,8 @@ vibe-coding/
 │   ├── apartment-rental-landing/     # LuxeHomes landing page
 │   ├── windows-desktop/              # Windows desktop simulator
 │   ├── icy-notes/                    # Glacial - ice-themed notes app
-│   └── bare-metal/                   # Industrial metal-themed notes app
+│   ├── bare-metal/                   # Industrial metal-themed notes app
+│   └── glass-percents/               # Glassmorphic percentage calculator
 ├── libs/                             # Shared libraries (future)
 ├── nx.json                           # Nx workspace configuration
 ├── tsconfig.base.json                # Base TypeScript config
@@ -98,6 +99,23 @@ pnpm nx serve bare-metal       # Dev server
 pnpm nx build bare-metal       # Production build
 pnpm nx test bare-metal        # Run tests
 pnpm nx typecheck bare-metal   # Type checking
+```
+
+### glass-percents (apps/glass-percents)
+**Glassmorphic percentage calculator**
+
+Beautifully designed percentage calculator with frosted glass effects and animated gradients.
+
+- **Tech Stack**: React 19 + TypeScript 5.9 + Vite 7.1 + CSS3
+- **Features**: 5 calculator types, backdrop blur, copy-to-clipboard, auto-calculation
+- **Design**: Pure CSS glassmorphism with animated gradient background
+
+**Commands:**
+```bash
+pnpm nx serve glass-percents
+pnpm nx build glass-percents
+pnpm nx test glass-percents
+pnpm nx typecheck glass-percents
 ```
 
 

@@ -38,6 +38,14 @@ A note-taking application with an industrial metal aesthetic. Notes rendered as 
 - 🛠️ React 19 + TypeScript + CSS Modules
 - 🎯 Features: Create/delete notes, dual texture variants (CSS/SVG), responsive layout
 
+### [Glass Percents](apps/glass-percents)
+**Glassmorphic percentage calculator**
+
+A beautifully designed percentage calculator featuring glassmorphic UI with frosted glass effects, animated gradients, and smooth interactions. Five calculator types for all percentage needs.
+
+- 🛠️ React 19 + TypeScript + CSS3
+- 🎯 Features: 5 calculator types, copy-to-clipboard, auto-calculation, responsive grid, backdrop blur effects
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -67,6 +75,7 @@ pnpm nx serve apartment-rental-landing
 pnpm nx serve windows-desktop
 pnpm nx serve icy-notes
 pnpm nx serve bare-metal
+pnpm nx serve glass-percents
 
 # Build for production
 pnpm nx build <app-name>
@@ -99,7 +108,8 @@ vibe-coding/
 │   ├── apartment-rental-landing/     # Landing page
 │   ├── windows-desktop/              # Windows desktop simulator
 │   ├── icy-notes/                    # Ice-themed notes app
-│   └── bare-metal/                   # Metal-themed notes app
+│   ├── bare-metal/                   # Metal-themed notes app
+│   └── glass-percents/               # Glassmorphic calculator
 ├── libs/                             # Shared libraries (future)
 ├── nx.json                           # Nx workspace configuration
 ├── tsconfig.base.json                # Base TypeScript config
@@ -167,6 +177,7 @@ Each application has its own detailed README:
 - [Windows Desktop README](apps/windows-desktop/README.md)
 - [Glacial README](apps/icy-notes/README.md)
 - [Bare Metal Notes README](apps/bare-metal/README.md)
+- [Glass Percents README](apps/glass-percents/README.md)
 
 ## 🔧 Nx Features
 
