@@ -1,0 +1,33 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient background -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" fill="url(#bg)"/>
+
+  <!-- Glass overlay -->
+  <rect width="64" height="64" rx="12" fill="url(#glass)"/>
+
+  <!-- Percentage symbol % -->
+  <!-- Top circle -->
+  <circle cx="22" cy="20" r="6" fill="white" opacity="0.9"/>
+
+  <!-- Diagonal line -->
+  <line x1="18" y1="44" x2="46" y2="20" stroke="white" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- Bottom circle -->
+  <circle cx="42" cy="44" r="6" fill="white" opacity="0.9"/>
+
+  <!-- Glass border -->
+  <rect width="64" height="64" rx="12" fill="none" stroke="white" stroke-width="1" opacity="0.3"/>
+</svg>
