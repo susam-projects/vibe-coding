@@ -9,7 +9,7 @@ A collection of experimental web applications, a "vibe-coding" experiment: build
 
 A beautifully designed percentage calculator featuring glassmorphic UI with frosted glass effects, animated gradients, and smooth interactions. Five calculator types for all percentage needs.
 
-- 🔗 [Live Demo](https://vibe-coding-windows-desktop.netlify.app/)
+- 🔗 [Live Demo](https://vibe-coding-glass-percents.netlify.app/)
 - 🛠️ React 19 + TypeScript + CSS3
 - 🎯 Features: 5 calculator types, copy-to-clipboard, auto-calculation, responsive grid, backdrop blur effects
 
