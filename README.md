@@ -4,13 +4,14 @@ A collection of experimental web applications, a "vibe-coding" experiment: build
 
 ## 🎨 Applications
 
-### [LuxeHomes](apps/apartment-rental-landing)
-**Modern apartment rental landing page**
+### [Glass Percents](apps/glass-percents)
+**Glassmorphic percentage calculator**
 
-A responsive landing page for an apartment rental company with smooth animations and modern design.
+A beautifully designed percentage calculator featuring glassmorphic UI with frosted glass effects, animated gradients, and smooth interactions. Five calculator types for all percentage needs.
 
-- 🛠️ React 19 + Vite + CSS3
-- 🎯 Features: Hero section, features showcase, testimonials, contact form, responsive design
+- 🔗 [Live Demo](https://vibe-coding-windows-desktop.netlify.app/)
+- 🛠️ React 19 + TypeScript + CSS3
+- 🎯 Features: 5 calculator types, copy-to-clipboard, auto-calculation, responsive grid, backdrop blur effects
 
 ### [Windows Desktop Simulator](apps/windows-desktop)
 **Web-based Windows environment**
@@ -21,14 +22,6 @@ An authentic Windows-style desktop environment with draggable windows, taskbar, 
 - 🛠️ React 19 + TypeScript + Vite
 - 🎯 Features: Window management, File Explorer, Notepad, custom hooks architecture
 
-### [Glacial (Icy Notes)](apps/icy-notes)
-**Notes that age like ice**
-
-A minimalist note-taking app exploring preservation aesthetics. Fresh notes appear clear, older notes develop frost patterns, ancient entries become heavily crystallized.
-
-- 🛠️ React 19 + Vite + hand-crafted SVG
-- 🎯 Features: Age-based visual progression, hover melt effect, glassmorphic design, localStorage persistence
-
 ### [Bare Metal Notes](apps/bare-metal)
 **Industrial note-taking with metal textures**
 
@@ -38,13 +31,21 @@ A note-taking application with an industrial metal aesthetic. Notes rendered as 
 - 🛠️ React 19 + TypeScript + CSS Modules
 - 🎯 Features: Create/delete notes, dual texture variants (CSS/SVG), responsive layout
 
-### [Glass Percents](apps/glass-percents)
-**Glassmorphic percentage calculator**
+### [LuxeHomes](apps/apartment-rental-landing)
+**Modern apartment rental landing page**
 
-A beautifully designed percentage calculator featuring glassmorphic UI with frosted glass effects, animated gradients, and smooth interactions. Five calculator types for all percentage needs.
+A responsive landing page for an apartment rental company with smooth animations and modern design.
 
-- 🛠️ React 19 + TypeScript + CSS3
-- 🎯 Features: 5 calculator types, copy-to-clipboard, auto-calculation, responsive grid, backdrop blur effects
+- 🛠️ React 19 + Vite + CSS3
+- 🎯 Features: Hero section, features showcase, testimonials, contact form, responsive design
+
+### [Glacial (Icy Notes)](apps/icy-notes)
+**Notes that age like ice**
+
+A minimalist note-taking app exploring preservation aesthetics. Fresh notes appear clear, older notes develop frost patterns, ancient entries become heavily crystallized.
+
+- 🛠️ React 19 + Vite + hand-crafted SVG
+- 🎯 Features: Age-based visual progression, hover melt effect, glassmorphic design, localStorage persistence
 
 ## 🚀 Quick Start
 
